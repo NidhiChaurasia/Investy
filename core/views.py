@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
 def input(request):
@@ -6,8 +7,30 @@ def input(request):
     return render(request,'input.html')
 
 def output(request):
+    if request.method == 'POST':
+        gender = request.POST.get('Gender')
+        age = request.POST.get('Age')
+        avenues = request.POST.get('Avenues')
+        factors = request.POST.get('Factors')
+        inobjectives = request.POST.get('InObjectives')
+        objectives = request.POST.get('Objectives')
+        stock_market = request.POST.get('StockMarket')
+        purpose = request.POST.get('Purpose')
+        instrument = request.POST.get('Instrument')
+        monitor = request.POST.get('Monitor')
+        return_rate = request.POST.get('Return')
+        most = request.POST.get('Mostly')
+        eq = request.POST.get('Equity')
+        mutual = request.POST.get('Mutual')
+        govt = request.POST.get('Government')
+        fd = request.POST.get('Fixed')
+        info = request.POST.get('Information')
+
+        # Do something with the data...
+        
+        return render(request,'output.html')
     
-    return render(request,'output.html')
+    return render(request,'input.html')
 
 '''
 import random
