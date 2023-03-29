@@ -5,12 +5,12 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
+    <div class="d-sm-flex align-items-center justify-content-center mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Results</h1>
+        {% comment %} <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
             Generate Random Transaction</a>
         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> {% endcomment %}
     </div>
 
     <!-- Content Row -->
@@ -102,7 +102,7 @@
                     <h6 class="m-0 font-weight-bold text-primary">Today's Earnings Overview</h6>
                     <div class="d-flex justify-content-around">
                     </div>
-                    <div class="dropdown no-arrow">
+                    {% comment %} <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -115,13 +115,13 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                    <button type="button" id="previousDay" onclick="getData()"
+                    {% comment %} <button type="button" id="previousDay" onclick="getData()"
                         class="btn btn-dark btn-sm mx-3"><span id="dayCount"></span> Previous Day
-                        Transactions</button>
+                        Transactions</button> {% endcomment %}
 
                     <div class="chart-area">
                         <canvas id="myAreaChart" data-url="todayGraph" width="400"
@@ -139,7 +139,7 @@
                 <div
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Transaction Status</h6>
-                    <div class="dropdown no-arrow">
+                    {% comment %} <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -152,7 +152,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
