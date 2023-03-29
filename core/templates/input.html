@@ -1,0 +1,231 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="container p-5">
+  <form action="{% url 'output' %}" method="POST" onsubmit="return validateForm()">
+    {% csrf_token %}
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">Gender</label>
+        <select name="Gender" id="Gender" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputCity">Age</label>
+        <input
+          name="Age"
+          type="number"
+          placeholder="18 to 65 only"
+          class="form-control"
+          id="Age"
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">Do you invest in Investment Avenues?</label>
+        <select name="Avenues" id="Avenues" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <label for="inputZip"
+          >What are the factors considered by you while investing in any
+          instrument?</label
+        >
+        <select name="Factors" id="Factors" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Returns">Returns</option>
+          <option value="Locking Period">Locking Period</option>
+          <option value="Risk">Risk</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputZip">What are your investment objectives?</label>
+        <select name="InObjectives" id="InObjectives" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Capital Appreciation">Capital Appreciation</option>
+          <option value="Income">Income</option>
+          <option value="Growth">Growth</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">Do you invest in Stock Market?</label>
+        <select name="StockMarket" id="StockMarket" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="form-group col-md-8">
+        <label for="inputState">What is your purpose behind investment?</label>
+        <select name="Purpose" id="Purpose" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Wealth Creation">Wealth Creation</option>
+          <option value="Savings for Future">Savings for Future</option>
+          <option value="Returns">Returns</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <label for="inputZip"
+          >How long do you prefer to keep your money in any investment
+          instrument?</label
+        >
+        <select name="Instrument" id="Instrument" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Less than 1 year">Less than 1 year</option>
+          <option value="1-3 years">1-3 years</option>
+          <option value="3-5 years">3-5 years</option>
+          <option value="More than 5 years">More than 5 years</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState"
+          >How frequent you monitor your investments?</label
+        >
+        <select name="Monitor" id="Monitor" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Daily">Daily</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Monthly">Monthly</option>
+          <option value="Quarterly">Quarterly</option>
+          <option value="Yearly">Yearly</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputZip"
+          >How much return do you expect from any investment instrument?</label
+        >
+        <select name="Return" id="Return" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="10%-20%">10%-20%</option>
+          <option value="20%-30%">20%-30%</option>
+          <option value="30%-40%">30%-40%</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputState"
+          >Which investment avenue do you mostly invest in?</label
+        >
+        <select name="Mostly" id="Mostly" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Mutual Funds">Mutual Funds</option>
+          <option value="Debentures">Debentures</option>
+          <option value="Government Bonds">Government Bonds</option>
+          <option value="Fixed Deposits">Fixed Deposits</option>
+          <option value="Public Provident Fund">Public Provident Fund</option>
+          <option value="Gold">Gold</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputZip">What are your savings objectives?</label>
+        <select name="Objectives" id="Objectives" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Retirement Plan">Retirement Plan</option>
+          <option value="Health Care">Health Care</option>
+          <option value="Education">Education</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Reasons for investing in Equity Market</label>
+        <select name="Equity" id="Equity" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Capital Appreciation">Capital Appreciation</option>
+          <option value="Dividend">Dividend</option>
+          <option value="Liquidity">Liquidity</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Reasons for investing in Mutual Funds</label>
+        <select name="Mutual" id="Mutual" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Better Returns">Better Returns</option>
+          <option value="Tax Benefits">Tax Benefits</option>
+          <option value="Fund Diversification">Fund Diversification</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputZip">Reasons for investing in Government Bonds</label>
+        <select name="Government" id="Government" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Safe Investment">Safe Investment</option>
+          <option value="Tax Incentives">Tax Incentives</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Reasons for investing in Fixed Deposits</label>
+        <select name="Fixed" id="Fixed" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Risk Free">Risk Free</option>
+          <option value="High Interest Rates">High Interest Rates</option>
+          <option value="Fixed Returns">Fixed Returns</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState"
+          >Your sources of information for investments is</label
+        >
+        <select name="Information" id="Information" class="form-control">
+          <option disabled value="" selected>Choose...</option>
+          <option value="Newspapers and Magazines">
+            Newspapers and Magazines
+          </option>
+          <option value="Internet">Internet</option>
+          <option value="Financial Consultants">Financial Consultants</option>
+          <option value="Television">Television</option>
+          <option value="Friends and Family">Friends and Family</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+</div>
+<script>
+    function validateForm() {
+        let Age = document.getElementById("Age").value;
+        let Gender = document.getElementById("Gender").value;
+        let Avenues = document.getElementById("Avenues").value;
+        let Factors = document.getElementById("Factors").value;
+        let Objectives = document.getElementById("Objectives").value;
+        let InObjectives = document.getElementById("InObjectives").value;
+        let StockMarket = document.getElementById("StockMarket").value;
+        let Purpose = document.getElementById("Purpose").value;
+        let Instrument = document.getElementById("Instrument").value;
+        let Monitor = document.getElementById("Monitor").value;
+        let Ret = document.getElementById("Return").value;
+        let Mostly = document.getElementById("Mostly").value;
+        let Equity = document.getElementById("Equity").value;
+        let Mutual = document.getElementById("Mutual").value;
+        let Government = document.getElementById("Government").value;
+        let Fixed = document.getElementById("Fixed").value;
+        let Information = document.getElementById("Information").value;
+        if (Age==='' || Age<18) {
+          alert("Age must be 18 to 65!");
+          return false; // Prevents the form from being submitted
+        }
+        if (Gender === '' || Avenues === '' || Factors === '' || Objectives === '' ||
+        InObjectives === '' || StockMarket === '' || Purpose === '' || Instrument === '' ||
+        Monitor === '' || Ret === '' || Mostly === '' || Equity === '' || Mutual === '' ||
+        Government === '' || Fixed === '' || Information === ''){
+            alert('Fill all input fields')
+            return false;
+        }
+        return true; // Allows the form to be submitted
+      }
+      
+</script>
+{% endblock content %}
