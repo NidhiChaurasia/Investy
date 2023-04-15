@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
 <div class="container p-5">
+  <h2 class="text-center mb-5">Fill some info so that can suggest you best option.</h2>
   <form
     action="{% url 'output' %}"
     method="POST"
