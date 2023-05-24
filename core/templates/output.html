@@ -5,7 +5,7 @@
 <div class="container-fluid">
 
     <!-- Content Row -->
-    <div class="row d-flex align-items-center justify-content-center">
+    <!-- <div class="row d-flex align-items-center justify-content-center">
         <div class="col-xl-3 col-md-6 mb-4 justify-content-center">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
@@ -22,6 +22,294 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-1 text-gray-800"><a target="_blank" href="https://www.google.com/search?q={{data}}">{{data}}</a></h1>
+        <p class="my-4">Best {{data}} Options are listed below:-</p>
+
+        <!-- Content Row -->
+        <div class="row">
+
+            <!-- Border Bottom Utilities -->
+            <div class="col-lg-12">
+                {% if data == 'Mutual Funds' %}
+                <div class="card mb-4 py-3 border-bottom-primary">
+                    <div class="card-body">
+                        ICICI Prudential Mutual
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-secondary">
+                    <div class="card-body">
+                        HDFC Mutual Fund
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-success">
+                    <div class="card-body">
+                        DSP Mutual Fund
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
+                        Axis Long Term Equity Fund
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-warning">
+                    <div class="card-body">
+                        Kotak Mahindra Bank
+                    </div>
+                </div>
+                {% elif data == 'Equity Market' %}
+                <div class="card mb-4 py-3 border-bottom-primary">
+                    <div class="card-body">
+                        Quant Tax Plan
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-secondary">
+                    <div class="card-body">
+                        PGIM India Midcap Opportunities Fund
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-success">
+                    <div class="card-body">
+                        Parag Parikh Flexi Cap Fund
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
+                        Mahindra Manulife Multi Cap Fund
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-warning">
+                    <div class="card-body">
+                        SBI Contra Fund
+                    </div>
+                </div>
+                {% elif data == 'Debentures' %}
+                <div class="card mb-4 py-3 border-bottom-primary">
+                    <div class="card-body">
+                        Convertible Debentures.
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-secondary">
+                    <div class="card-body">
+                        Non-Convertible Debentures.
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-success">
+                    <div class="card-body">
+                        Registered Debentures.
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
+                        Unregistered Debentures.
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-warning">
+                    <div class="card-body">
+                        Redeemable Debentures.
+                    </div>
+                </div>
+                {% elif data == 'Government Bonds' %}
+                <div class="card mb-4 py-3 border-bottom-primary">
+                    <div class="card-body">
+                        ICICI Prudential Gilt Fund – Direct
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-secondary">
+                    <div class="card-body">
+                        SBI Magnum Gilt Fund – Direct
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-success">
+                    <div class="card-body">
+                        Tata Gilt Securities Fund – Direct
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
+                        Kotak Gilt Investment PF & Trust – Direct
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-warning">
+                    <div class="card-body">
+                        HSBC Gilt Fund – Direct
+                    </div>
+                </div>
+                {% elif data == 'Fixed Deposits' %}
+                <div class="card mb-4 py-3 border-bottom-primary">
+                    <div class="card-body">
+                        AXIS Bank 3.50-6.10%
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-secondary">
+                    <div class="card-body">
+                        Bandhan Bank 3.00% - 5.50%
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-success">
+                    <div class="card-body">
+                        Bank of Baroda 3.00% - 5.65%
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
+                        Canara Bank 3.25% - 7.00%
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-warning">
+                    <div class="card-body">
+                        HDFC Bank 3.00% - 4.00%
+                    </div>
+                </div>
+                {% elif data == 'Public Provident Fund' %}
+                <div class="card mb-4 py-3 border-bottom-primary">
+                    <div class="card-body">
+                        Public Provident Fund
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-secondary">
+                    <div class="card-body">
+                        National Saving Certificate (NSC)
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-success">
+                    <div class="card-body">
+                        Tax Saver Fixed Deposit
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
+                        Sukanya Samriddhi Yojana
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-warning">
+                    <div class="card-body">
+                        5 Year Post Office Time Deposit Account
+                    </div>
+                </div>
+                {% elif data == 'Gold' %}
+                <div class="card mb-4 py-3 border-bottom-primary">
+                    <div class="card-body">
+                        1) Titan Company
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-secondary">
+                    <div class="card-body">
+                        2) Muthoot Finance Ltd.
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-success">
+                    <div class="card-body">
+                        3) Manappuram Finance Ltd.
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
+                        4) Kalyan Jewellers
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-warning">
+                    <div class="card-body">
+                        5) Vaibhav Global
+                    </div>
+                </div>
+                {% elif data == 'Real Estate' %}
+                <div class="card mb-4 py-3 border-bottom-primary">
+                    <div class="card-body">
+                        Residential Real Estate
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-secondary">
+                    <div class="card-body">
+                        Commercial Real Estate
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-success">
+                    <div class="card-body">
+                        Raw Land & New Construction
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
+                        Real Estate Investment Trusts (REITs)
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-warning">
+                    <div class="card-body">
+                        Crowdfunding Platforms
+                    </div>
+                </div>
+                {% elif data == 'Cryptocurrency' %}
+                <div class="card mb-4 py-3 border-bottom-primary">
+                    <div class="card-body">
+                        1. Bitcoin (BTC)
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-secondary">
+                    <div class="card-body">
+                        2. Ethereum (ETH)
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-success">
+                    <div class="card-body">
+                        3. Tether (USDT)
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-info">
+                    <div class="card-body">
+                        4. Binance Coin (BNB)
+                    </div>
+                </div>
+
+                <div class="card mb-4 py-3 border-bottom-warning">
+                    <div class="card-body">
+                        5. XRP (XRP)
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+
     </div>
 
     <!-- Content Row -->
@@ -29,10 +317,8 @@
     <div class="row">
 
         {% if show %}
-        <!-- Area Chart -->
         <div class="col-xl-12 col-lg-12">
             <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
                 <div
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">{{data}} last 5 years Data</h6>
@@ -53,7 +339,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Card Body -->
                 
                 <div class="card-body">
                     {% comment %} <button type="button" id="previousDay" onclick="getData()"
@@ -69,8 +354,9 @@
 
             </div>
         </div>
+        {% endif %}
+        
     </div>
-    {% endif %}
 
     <!-- Content Row -->
     {% comment %} <div class="row">

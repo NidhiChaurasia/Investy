@@ -203,7 +203,7 @@
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="inputZip">Mutual Funds</label>
-        <select name="mfr" id="mfr" class="form-control">
+        <select name="mfr" id="mfr" class="form-control dropdown">
           <option disabled value="" selected>Choose...</option>
           <option value="0">1</option>
           <option value="1">2</option>
@@ -218,7 +218,7 @@
       </div>
       <div class="form-group col-md-4">
         <label for="inputZip">Equity Market</label>
-        <select name="emr" id="emr" class="form-control">
+        <select name="emr" id="emr" class="form-control dropdown">
           <option disabled value="" selected>Choose...</option>
           <option value="0">1</option>
           <option value="1">2</option>
@@ -233,7 +233,7 @@
       </div>
       <div class="form-group col-md-4">
         <label for="inputZip">Debentures</label>
-        <select name="dr" id="dr" class="form-control">
+        <select name="dr" id="dr" class="form-control dropdown">
           <option disabled value="" selected>Choose...</option>
           <option value="0">1</option>
           <option value="1">2</option>
@@ -250,7 +250,7 @@
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="inputZip">Government Bonds</label>
-        <select name="gbr" id="gbr" class="form-control">
+        <select name="gbr" id="gbr" class="form-control dropdown">
           <option disabled value="" selected>Choose...</option>
           <option value="0">1</option>
           <option value="1">2</option>
@@ -265,7 +265,7 @@
       </div>
       <div class="form-group col-md-4">
         <label for="inputZip">Fixed Deposits</label>
-        <select name="fdr" id="fdr" class="form-control">
+        <select name="fdr" id="fdr" class="form-control dropdown">
           <option disabled value="" selected>Choose...</option>
           <option value="0">1</option>
           <option value="1">2</option>
@@ -280,7 +280,7 @@
       </div>
       <div class="form-group col-md-4">
         <label for="inputZip">Public Provident Fund</label>
-        <select name="pfr" id="pfr" class="form-control">
+        <select name="pfr" id="pfr" class="form-control dropdown">
           <option disabled value="" selected>Choose...</option>
           <option value="0">1</option>
           <option value="1">2</option>
@@ -297,7 +297,7 @@
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="inputZip">Gold</label>
-        <select name="goldr" id="goldr" class="form-control">
+        <select name="goldr" id="goldr" class="form-control dropdown">
           <option disabled value="" selected>Choose...</option>
           <option value="0">1</option>
           <option value="1">2</option>
@@ -312,7 +312,7 @@
       </div>
       <div class="form-group col-md-4">
         <label for="inputZip">Real Estate</label>
-        <select name="rer" id="rer" class="form-control">
+        <select name="rer" id="rer" class="form-control dropdown">
           <option disabled value="" selected>Choose...</option>
           <option value="0">1</option>
           <option value="1">2</option>
@@ -327,7 +327,7 @@
       </div>
       <div class="form-group col-md-4">
         <label for="inputZip">Cryptocurrency</label>
-        <select name="cr" id="cr" class="form-control">
+        <select name="cr" id="cr" class="form-control dropdown">
           <option disabled value="" selected>Choose...</option>
           <option value="0">1</option>
           <option value="1">2</option>
@@ -346,6 +346,16 @@
   </form>
 </div>
 <script>
+  $(document).ready(function() {
+    // Listen for change event on all select dropdowns
+    $('.dropdown').change(function() {
+      var selectedValue = $(this).val();
+  
+      // Update other select dropdowns by removing the selected option
+      $('.dropdown').not(this).find('option[value="' + selectedValue + '"]').remove();
+    });
+  });  
+  
   function validateForm() {
     let Age = document.getElementById("Age").value;
     let Gender = document.getElementById("Gender").value;
